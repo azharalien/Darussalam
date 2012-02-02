@@ -56,9 +56,9 @@ a:hover, a:active, a:focus {
 }
 
 .header {
-	background: #F5A30A;
+	background: #000;
 	border-bottom-style:solid;
-	border-bottom-color: #F90;
+	border-bottom-color: #666;
 	border-radius: 5px;
 	margin-top: 5px;
 	margin-bottom: 10px;
@@ -78,14 +78,14 @@ a:hover, a:active, a:focus {
 	float: left;
 	width: 20%;
 	
-	border-radius: 3px; 
+	border-radius: 5px; 
 	
-	background: #F5A30A;
+	background: #000;
 	padding-bottom: 0;
 	margin-left: 10px;
 	border-style:solid;
 	border-width: thin;
-	margin-bottom: 10px;
+	/*margin-bottom: 10px; */
 	}
 .content {
 	padding: 10px 0;
@@ -112,18 +112,18 @@ ul.nav a, ul.nav a:visited {
 	
 	text-decoration: none;
 	border-bottom-style: inset;
-	border-bottom-color:#666;
-	background: #F5A30A;
+	border-bottom-color:#CCC;
+	background: #666;
 	color: #000;
 }
 ul.nav a:hover, ul.nav a:active, ul.nav a:focus { 
-	background: #F5A30A;
+	background: #333;
 	color: #FFF;
 }
 
 .footer {
 	padding: 10px 0;
-	background: #F90;
+	background: #333;
 	position: relative;
 	clear: both;
 	margin-top:10px;
@@ -148,12 +148,12 @@ ul.nav a:hover, ul.nav a:active, ul.nav a:focus {
 #centeredmenu {
    
    width:100%;
-   background:#F5A30A;
+   background:#000;
    
    overflow:hidden;
    position: absolute; bottom: 0;
    border-top-style:outset;
-   border-top-color:#666;
+   border-top-color:#000;
    
    border-top-width: 1px;
    border-radius: 5px;
@@ -186,7 +186,7 @@ ul.nav a:hover, ul.nav a:active, ul.nav a:focus {
    display:block;
    margin:0 0 0 1px;
    padding:3px 10px;
-   background:#F5A30A;
+   background:#666;
    color:#fff;
    text-decoration:none;
    line-height:1.3em;
