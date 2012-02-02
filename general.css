@@ -1,11 +1,10 @@
 <style type="text/css">
 <!--
 body {
-	font: 100%/1.4 Verdana, Arial, Helvetica, sans-serif;
-	background: #FFF;
+	background-color:#FFF;
 	margin: 0;
 	padding: 0;
-	color: #000;
+	color:#FFF;
 }
 
 
@@ -43,7 +42,7 @@ a:hover, a:active, a:focus {
 	
 	
 	min-width: 780px;
-	background:#FFF;
+	background:#CCC;
 	margin: 50px auto;
 	border-radius: 5px;
 	-moz-box-shadow: 0 0 10px 4px #888;
@@ -56,7 +55,8 @@ a:hover, a:active, a:focus {
 }
 
 .header {
-	background: #000;
+	background: #000 url(img/backdrop.jpg) top left no-repeat  ;
+	background-size: 100% 200px;
 	border-bottom-style:solid;
 	border-bottom-color: #666;
 	border-radius: 5px;
@@ -67,8 +67,8 @@ a:hover, a:active, a:focus {
 	-webkit-box-shadow: 0 0 10px 4px #888;
 	box-shadow: 0 0 10px 4px #888;*/
 	position: relative;
-	height:150px;
-
+	height: 200px;
+	
 	
 	
 }
@@ -89,7 +89,7 @@ a:hover, a:active, a:focus {
 	}
 .content {
 	padding: 10px 0;
-	width: 79%;
+	width: 78%;
 	float: right;
 	background-color:#FFF;
 	font-family:Verdana, Geneva, sans-serif;
@@ -148,15 +148,35 @@ ul.nav a:hover, ul.nav a:active, ul.nav a:focus {
 #centeredmenu {
    
    width:100%;
-   background:#000;
+   background:#333 ;
+
    
    overflow:hidden;
    position: absolute; bottom: 0;
    border-top-style:outset;
-   border-top-color:#000;
+   border-top-color:#999;
    
    border-top-width: 1px;
    border-radius: 5px;
+   border-bottom-style:outset;
+   border-bottom-color:#999;
+   
+   border-botom-width: 1px;
+      background-image:
+        -webkit-gradient(
+        linear,
+        left bottom,
+        left top,
+        color-stop(0.10, rgb(189,189,189)),
+        color-stop(0.78, rgb(0,0,0)),
+        color-stop(0.79, rgb(0,0,0))
+    );
+    -moz-linear-gradient(
+        center bottom,
+        rgb(189,189,189) 79%,
+        rgb(0,0,0) 79%,
+        rgb(0,0,0) 79%
+	);	
    
 }
 #centeredmenu ul {
@@ -172,6 +192,8 @@ ul.nav a:hover, ul.nav a:active, ul.nav a:focus {
 	color: #222;	
 	text-shadow: 1px 1px 3px #555;
 	font-size: 18px;
+	border-radius:5px;
+	opacity: 2;
 }
 #centeredmenu ul li {
    display:block;
@@ -181,6 +203,7 @@ ul.nav a:hover, ul.nav a:active, ul.nav a:focus {
    padding:0;
    position:relative;
    right:50%;
+   border-radius:5px;
 }
 #centeredmenu ul li a {
    display:block;
@@ -202,10 +225,10 @@ ul.nav a:hover, ul.nav a:active, ul.nav a:focus {
 #centeredmenu ul li a.active:hover {
    color:#fff;
    background:#F60;
-   -moz-box-shadow:    inset 0 0 10px #000000;
-   -webkit-box-shadow: inset 0 0 10px #000000;
-   box-shadow:         inset 0 0 10px #000000;
+
    
 }
+
+
 
 </style>
