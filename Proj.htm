@@ -7,93 +7,18 @@
 
 
 
-<script type="text/javascript" src="../WebPro/jquery-1.5.min.js"></script>
-<script type="text/javascript" src="../WebPro/jquery-ui-1.8.9.custom.min.js"></script>
+
 <link href="../WebPro/general.css" rel="stylesheet" type="text/css">
 <link href="../WebPro/dragdrop.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="slider.css" />
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js" ></script>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.5.3/jquery-ui.min.js" ></script>
 <script type="text/javascript">
-    var total_items = 0;
-    var total_price = 0;
-    $(document).ready(function() {
-
-        $(".item").draggable({
-            revert: true            
-        });
-        $("#cart_items").draggable({
-            axis: "x"
-        });
-
-        $("#cart_items").droppable({
-            accept: ".item",
-            activeClass: "drop-active",
-            hoverClass: "drop-hover",
-            drop: function(event, ui) {
-                var item = ui.draggable.html();
-                var itemid = ui.draggable.attr("id");
-                var html = '<div class="item icart">';
-                html = html + '<div class="divrm">';
-                html = html + '<a onclick="remove(this)" class="remove '+itemid+'">&times;</a>';
-                html = html + '<div/>'+item+'</div>';
-                $("#cart_items").append(html);
-
-                // update total items
-                total_items++;
-                $("#citem").html(total_items);
-
-                // update total price
-                var price = parseInt(ui.draggable.find(".price").html().replace("$ ", ""));
-                total_price = total_price + price;
-                $("#cprice").html("$ " + total_price);
-
-                // expand cart items
-                if (total_items > 4) {
-                    $("#cart_items").animate({width: "+=120"}, 'slow');
-                }
-            }
-        });
-       
-
-        $("#btn_next").click(function() {
-            $("#cart_items").animate({left: "-=100"}, 100);
-            return false;
-        });
-        $("#btn_prev").click(function() {
-            $("#cart_items").animate({left: "+=100"}, 100);
-            return false;
-        });
-        $("#btn_clear").click(function() {
-            $("#cart_items").fadeOut("2000", function() {
-               $(this).html("").fadeIn("fast").css({left: 0});
-            });
-            $("#citem").html("0");
-            $("#cprice").html("$ 0");
-            total_items = 0;
-            total_price = 0;
-            return false;
-        });
-    });
-    function remove(el) {
-        $(el).hide();
-        $(el).parent().parent().effect("highlight", {color: "#ff0000"}, 1000);
-        $(el).parent().parent().fadeOut('1000');
-        setTimeout(function() {
-            $(el).parent().parent().remove();
-            // collapse cart items
-            if (total_items > 3) {
-                $("#cart_items").animate({width: "-=120"}, 'slow');
-            }
-        }, 1100);
-
-        // update total item
-        total_items--;
-        $("#citem").html(total_items);
-
-        // update totl price
-        var price = parseInt($(el).parent().parent().find(".price").html().replace("$ ", ""));
-        total_price = total_price - price;
-        $("#cprice").html("$ " + total_price);
-    }
+$(document).ready(function(){  
+    $("#featured > ul").tabs({fx:{opacity: "toggle"}}).tabs("rotate", 8000, true);  
+});  
 </script>
+
 </head>
 
 <body>
@@ -123,88 +48,58 @@
     <!-- end .sidebar1 --></div>
   <div class="content">
   
+  <!--  Content Slider starts  -->
+  		<div id="featured" >
+		  <ul class="ui-tabs-nav">
+	        <li class="ui-tabs-nav-item ui-tabs-selected" id="nav-fragment-1"><a href="#fragment-1"><img src="images/image1-small.jpg" alt="" /><span>Book1</span></a></li>
+	        <li class="ui-tabs-nav-item" id="nav-fragment-2"><a href="#fragment-2"><img src="images/image2-small.jpg" alt="" /><span>Book2</span></a></li>
+	        <li class="ui-tabs-nav-item" id="nav-fragment-3"><a href="#fragment-3"><img src="images/image3-small.jpg" alt="" /><span>Book3</span></a></li>
+	        <li class="ui-tabs-nav-item" id="nav-fragment-4"><a href="#fragment-4"><img src="images/image4-small.jpg" alt="" /><span>Book4</span></a></li>
+	      </ul>
+
+	    <!-- First Content -->
+	    <div id="fragment-1" class="ui-tabs-panel" style="">
+        <div class="heading" style="">
+        <h2>Book-1</h2>
+        <p>Author....</p></div>
+        <div class="img"><!--Picture anchor--> <img src="img/2.jpg" alt="Islamic Book"/><br>recent release!</br></div>
+        <div class="description"> 
+         </p>This is the description of the book...
+        <a href="#" >read more<!-- link to book page--></a></p> 
+        </div> 
+	    </div>
+
+	    <!-- Second Content -->
+	    <div id="fragment-2" class="ui-tabs-panel ui-tabs-hide" style="">
+			<img src="img/3.jpg" alt="" />
+			 <div class="info" >
+				<h2><a href="#" >Book2-Title</a></h2>
+				<p>Book2-Description...<a href="#" >read more<!-- link to book page--></a></p>
+			 </div>
+	    </div>
+
+	    <!-- Third Content -->
+	    <div id="fragment-3" class="ui-tabs-panel ui-tabs-hide" style="">
+			<img src="img/4.jpg" alt="" />
+			 <div class="info" >
+				<h2><a href="#" >Book3-Title</a></h2>
+				<p>Book3-Description...<a href="#" >read more<!-- link to book page--></a></p>
+	         </div>
+	    </div>
+
+	    <!-- Fourth Content -->
+	    <div id="fragment-4" class="ui-tabs-panel ui-tabs-hide" style="">
+			<img src="img/5.jpg" alt="" />
+			 <div class="info" >
+				<h2><a href="#" >Book4-Title</a></h2>
+				<p>Book4-Description...<a href="#" >read more<!-- link to book page--></a></p>
+	         </div>
+	    </div>
+
+  </div> <!--End of content slider feature div-->
   
-   <div id="item_container">
-          <div class="item" id="i1">
-              <img src="../WebPro/img/1.jpg"/>
-              <label class="title">Book 1</label>
-              <label class="price">$ 20</label>
-          </div>
-          <div class="item" id="i2">
-              <img src="../WebPro/img/2.jpg"/>
-              <label class="title">Book 2</label>
-              <label class="price">$ 24</label>
-          </div>
-          <div class="item" id="i3">
-              <img src="../WebPro/img/3.jpg"/>
-              <label class="title">Book 3</label>
-              <label class="price">$ 18</label>
-          </div>
-          <div class="item" id="i4">
-              <img src="../WebPro/img/4.jpg"/>
-              <label class="title">Book 4</label>
-              <label class="price">$ 30</label>
-          </div>
-          <div class="item" id="i5">
-              <img src="../WebPro/img/5.jpg"/>
-              <label class="title">Book 5</label>
-              <label class="price">$ 28</label>
-          </div>
-          <div class="item" id="i6">
-              <img src="../WebPro/img/6.jpg"/>
-              <label class="title">Book 6</label>
-              <label class="price">$ 26</label>
-          </div>
-          <div class="item" id="i7">
-              <img src="../WebPro/img/7.jpg"/>
-              <label class="title">Book 7</label>
-              <label class="price">$ 35</label>
-          </div>
-          <div class="item" id="i8">
-              <img src="../WebPro/img/8.jpg"/>
-              <label class="title">Book 8</label>
-              <label class="price">$ 33</label>
-          </div>
-          <div class="item" id="i9">
-              <img src="../WebPro/img/9.jpg"/>
-              <label class="title">Book 9 1</label>
-              <label class="price">$ 12</label>
-          </div>
-          <div class="item" id="i10">
-              <img src="../WebPro/img/10.jpg"/>
-              <label class="title">Book 10</label>
-              <label class="price">$ 22</label>
-          </div>
-          <div class="clear"></div>
-      
-      </div>
-      <div id="cart_container">
-          <div id="cart_title">
-              <span>Shopping Cart</span>
-              <div class="clear"></div>
-          </div>
-          <div id="cart_toolbar">
-              <div id="cart_items" class="back"></div>
-          </div>
-          <div id="navigate">
-              <div id="nav_left">
-                  <a href="" id="btn_prev"><</a>
-                  <a href="" id="btn_next">></a>
-                  <a href="" id="btn_clear">Clear Cart</a>
-              </div>
-              <div id="nav_right">
-                  <span class="sptext">
-                      <label>Items </label><label class="count" id="citem">0</label>
-                  </span>
-                  <span class="sptext">
-                      <label>Price </label><label class="count" id="cprice">$ 0</label>
-                  </span>
-              </div>
-              <div class="clear"></div>
-          </div>
-      </div>
- 
-    <!-- end .content --></div>
+</div> <!--End of container-->
+
   <div class="footer">
  
     <center>This is a site created and maintained by |Azar & Co.|Katsun|Levi's Inc.|Benju DigiArt</center>
