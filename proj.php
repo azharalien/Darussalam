@@ -4,10 +4,6 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 
 <title>IslamicBookspot.com</title>
-
-
-
-
 <link href="../WebPro/general.css" rel="stylesheet" type="text/css">
 <link href="../WebPro/comments.css" rel="stylesheet" type="text/css">
 <link href="../WebPro/dragdrop.css" rel="stylesheet" type="text/css">
@@ -68,8 +64,8 @@ return false;
 </head>
 
 <body>
-
-<div class="container" >
+<div class="container">
+  
   <div class="header">
  
 <div id="centeredmenu">
@@ -163,8 +159,7 @@ Post Your Comments:
 <input type="submit" class="submit" value="Post" />
 </form>
 </div>
-
-
+</div>
 </div> <!--End of container-->
 
 
@@ -173,7 +168,6 @@ Post Your Comments:
     <center>This is a site created and maintained by |Azar & Co.|Katsun|Levi's Inc.|Benju DigiArt</center>
     
     <!-- end .footer --></div>
-  <!-- end .container --></div>
 </body>
 </html>
 
