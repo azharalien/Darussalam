@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 
-<title>IslamicBookspot.com</title>
+<title></title>
 <link href="../WebPro/general.css" rel="stylesheet" type="text/css">
 <link href="../WebPro/comments.css" rel="stylesheet" type="text/css">
 <link href="../WebPro/dragdrop.css" rel="stylesheet" type="text/css">
