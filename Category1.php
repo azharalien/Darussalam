@@ -91,9 +91,9 @@ return false;
   
 <!-- div-1 for first book-->
 <div class="book_content">
-	<div class="main_heading"> This the Heading </div>
+	<div class="main_heading"> This the Heading Of the book </div>
     <div class="main_container">
-    	<div class="main_image"><img src="" alt=""/></div>
+    	<div class="main_image"><!--the image height:200px width:150px--><img src="" alt=""/></div>
     	<div class="main_details">
         <p>Item: </p>
         <p>Price:</p>
@@ -101,7 +101,37 @@ return false;
         </div>
     </div>
     <div class="main_description">
-    adsfadsf
+    This is the description of the book...
+    </div> 
+</div>
+
+<div class="book_content">
+	<div class="main_heading"> This the Heading Of the book </div>
+    <div class="main_container">
+    	<div class="main_image"><!--the image height:200px width:150px--><img src="" alt=""/></div>
+    	<div class="main_details">
+        <p>Item: </p>
+        <p>Price:</p>
+        <p>Pages:</p>
+        </div>
+    </div>
+    <div class="main_description">
+    This is the description of the book...
+    </div> 
+</div>
+
+<div class="book_content">
+	<div class="main_heading"> This the Heading Of the book </div>
+    <div class="main_container">
+    	<div class="main_image"><!--the image height:200px width:150px--><img src="" alt=""/></div>
+    	<div class="main_details">
+        <p>Item: </p>
+        <p>Price:</p>
+        <p>Pages:</p>
+        </div>
+    </div>
+    <div class="main_description">
+    This is the description of the book...
     </div> 
 </div>
    
