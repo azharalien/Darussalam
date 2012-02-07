@@ -94,6 +94,9 @@ a:hover, a:active, a:focus {
 	background-color:#FFF;
 	font-family:Verdana, Geneva, sans-serif;
 	font-size:12px;
+	border-left-style:solid;
+	border-left-width:3px;
+	border-left-color:#999;
 }
 
 .content ul, .content ol { 
@@ -229,6 +232,64 @@ ul.nav a:hover, ul.nav a:active, ul.nav a:focus {
    
 }
 
+.book_content{
+	width:90%;
+	border-radius:5px;
+	border-color:#333;
+	border-style:solid;
+    height:auto; width:90%;
+	margin-left:20px;
+	margin-top:10px;
+	margin-bottom:10px;
+	box-shadow: 0 0 10px 4px #888;
+	background-color:#FFC;
+		
 
+}
+
+.main_heading{
+	font-family:Verdana, Geneva, sans-serif;
+	font-weight:bolder;
+	
+	color:#900;
+	font-size:24px;
+	text-align:center;
+}
+
+.main_image{
+	float:left;
+	background-color:#CCC;
+	margin-left:30px;
+	margin-right:20px;
+	margin-bottom:10px;
+	margin-top:10px;
+	height:200px;
+	width:150px;
+
+} 
+
+.main_details{
+	font-size:12px;
+	font-weight:bold;
+	
+}
+
+.main_container{
+	display:block;	
+}
+
+.main_description{
+	width:90%;
+	font-size: 14px;
+	font-weight:bold;
+	color:#666;
+	clear:both;
+	margin-left:30px;
+	margin-top:10px;
+	margin-bottom:10px;
+	margin-right:10px;
+	overflow:hidden;
+	
+} 
 
 </style>

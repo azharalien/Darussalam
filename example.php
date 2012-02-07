@@ -81,66 +81,29 @@ return false;
     <!-- end .header --></div>
   <div class="sidebar1">
     <ul class="nav">
-      <li><a href="example.php">Hereafter and Unseen</a></li>      <li><a href="#">Revelations</a></li>
+      <li><a href="#example.php">Hereafter and Unseen</a></li>
+      <li><a href="#">Revelations</a></li>
       <li><a href="#">Advanced books</a></li>
       <li><a href="#">Recent</a></li>
     </ul>
     
     <!-- end .sidebar1 --></div>
-  <div class="content">
-  
-  <!--  Content Slider starts  -->
-  		<div id="featured" style="margin-left:50px;">
-		  <ul class="ui-tabs-nav">
-	        <li class="ui-tabs-nav-item ui-tabs-selected" id="nav-fragment-1"><a href="#fragment-1"><img src="images/image1-small.jpg" alt="" /><span>Book1</span></a></li>
-	        <li class="ui-tabs-nav-item" id="nav-fragment-2"><a href="#fragment-2"><img src="images/image2-small.jpg" alt="" /><span>Book2</span></a></li>
-	        <li class="ui-tabs-nav-item" id="nav-fragment-3"><a href="#fragment-3"><img src="images/image3-small.jpg" alt="" /><span>Book3</span></a></li>
-	        <li class="ui-tabs-nav-item" id="nav-fragment-4"><a href="#fragment-4"><img src="images/image4-small.jpg" alt="" /><span>Book4</span></a></li>
-	      </ul>
+<div class="content">
 
-	    <!-- First Content -->
-	    <div id="fragment-1" class="ui-tabs-panel" style="">
-        <div class="heading" style="">
-        <h2>Book-1</h2>
-        <p>Author....</p></div>
-        <div class="img"><!--Picture anchor--> <img src="img/2.jpg" alt="Islamic Book"/><br>recent release!</br></div>
-        <div class="description"> 
-         </p>This is the description of the book...
-        <a href="#" >read more<!-- link to book page--></a></p> 
-        </div> 
-	    </div>
+<div style="border-style:solid; border-radius:5px; border-color:#000;">
+<img src="img/1.jpg"/>
+<img src="img/2.jpg"/>
+<img src="img/3.jpg"/>
+<img src="img/4.jpg"/>
 
-	    <!-- Second Content -->
-	    <div id="fragment-2" class="ui-tabs-panel ui-tabs-hide" style="">
-			<img src="img/3.jpg" alt="" />
-			 <div class="info" >
-				<h2><a href="#" >Book2-Title</a></h2>
-				<p>Book2-Description...<a href="#" >read more<!-- link to book page--></a></p>
-			 </div>
-	    </div>
 
-	    <!-- Third Content -->
-	    <div id="fragment-3" class="ui-tabs-panel ui-tabs-hide" style="">
-			<img src="img/4.jpg" alt="" />
-			 <div class="info" >
-				<h2><a href="#" >Book3-Title</a></h2>
-				<p>Book3-Description...<a href="#" >read more<!-- link to book page--></a></p>
-	         </div>
-	    </div>
 
-	    <!-- Fourth Content -->
-	    <div id="fragment-4" class="ui-tabs-panel ui-tabs-hide" style="">
-			<img src="img/5.jpg" alt="" />
-			 <div class="info" >
-				<h2><a href="#" >Book4-Title</a></h2>
-				<p>Book4-Description...<a href="#" >read more<!-- link to book page--></a></p>
-	         </div>
-	    </div>
 
-  </div> <!--End of content slider feature div-->
-  
+<div style=""> </div> 
+</div>
+<!--Comment div starts here-->  
 <div id="main">
-<div style="font-family:'Georgia', Times New Roman, Times, serif; font-size: 16px; margin-bottom:20px; margin-left:20px; ">
+<div style="font-family:'Georgia', Times New Roman, Times, serif; font-size: 16px; margin-bottom:20px; margin-left:20px;  ">
 Post Your Comments:
 </div>
 <ol  id="update" class="timeline">
