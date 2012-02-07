@@ -98,6 +98,8 @@ return false;
         <p>Item: </p>
         <p>Price:</p>
         <p>Pages:</p>
+        <p>To Buy, Contact :machi fill Shop phone no. here...</p>
+        <p>Email id: </p>        
         </div>
     </div>
     <div class="main_description">
@@ -113,6 +115,8 @@ return false;
         <p>Item: </p>
         <p>Price:</p>
         <p>Pages:</p>
+        <p>To Buy, Contact : machi fill Shop phone no. here...</p>
+        <p>Email id: </p>
         </div>
     </div>
     <div class="main_description">
@@ -128,6 +132,8 @@ return false;
         <p>Item: </p>
         <p>Price:</p>
         <p>Pages:</p>
+        <p>To Buy, Contact : machi fill Shop phone no. here...</p>
+        <p>Email id: </p>        
         </div>
     </div>
     <div class="main_description">

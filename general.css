@@ -241,6 +241,8 @@ ul.nav a:hover, ul.nav a:active, ul.nav a:focus {
 	margin-left:20px;
 	margin-top:10px;
 	margin-bottom:10px;
+	-moz-box-shadow: 0 0 10px 4px #888;
+	-webkit-box-shadow: 0 0 10px 4px #888;
 	box-shadow: 0 0 10px 4px #888;
 	background-color:#FFC;
 		
