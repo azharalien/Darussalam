@@ -85,7 +85,7 @@ return false;
       <li><a href="quran.php">Holy Qur'an</a></li>
       <li><a href="fiqh.php">Fiqh</a></li>
       <li><a href="hadith.php">Hadith & Sunnah</a></li>
-      <li><a href="#">Hereafter & The Unseen</a></li>
+      <li><a href="hereafter.php">Hereafter & The Unseen</a></li>
       <li><a href="#">Language & Science</a></li>
       <li><a href="bio.php">Biography & History</a></li>
     </ul>

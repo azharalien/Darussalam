@@ -64,9 +64,10 @@ return false;
 </head>
 
 <body>
+
 <div class="container">
   
-  <div class="header">
+<div class="header">
  
 <div id="centeredmenu">
    <ul>
@@ -176,6 +177,7 @@ Post Your Comments:
 </form>
 </div>
 </div>
+</div><!--Content-->
 </div> <!--End of container-->
 
 
