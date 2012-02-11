@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<title></title>
+<link href="../WebPro/general.css" rel="stylesheet" type="text/css">
+<link href="../WebPro/comments.css" rel="stylesheet" type="text/css">
+<link href="../WebPro/dragdrop.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="slider.css" />
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js" ></script>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.5.3/jquery-ui.min.js" ></script>
+<script type="text/javascript">
+$(document).ready(function(){  
+    $("#featured > ul").tabs({fx:{opacity: "toggle"}}).tabs("rotate",8500, true);  
+});  
+
+$(function() {
+
+$(".submit").click(function() {
+
+var name = $("#name").val();
+var email = $("#email").val();
+	var comment = $("#comment").val();
+    var dataString = 'name='+ name + '&email=' + email + '&comment=' + comment;
+	
+	if(name=='' || email=='' || comment=='')
+     {
+    alert('Please Give Valide Details');
+     }
+	else
+	{
+	$("#flash").show();
+	$("#flash").fadeIn(400).html('<img src="ajax-loader.gif" align="absmiddle">&nbsp;<span class="loading">Loading Comment...</span>');
+$.ajax({
+	type: "POST",
+    url: "commentajax.php",
+    data: dataString,
+    cache: false,
+    success: function(html){
+ 
+  $("ol#update").append(html);
+  $("ol#update li:last").fadeIn("slow");
+  document.getElementById('email').value='';
+   document.getElementById('name').value='';
+    document.getElementById('comment').value='';
+	$("#name").focus();
+ 
+  $("#flash").hide();
+	
+  }
+ });
+}
+return false;
+	});
+
+
+
+});
+
+
+</script>
+
+</head>
+
+<body>
+<div class="container">
+  
+  <div class="header">
+ 
+<div id="centeredmenu">
+   <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">Categories</a></li>
+      <li><a href="#">Cart</a></li>
+      <li><a href="#">Login</a></li>
+   </ul>
+</div>
+    
+    
+    <!-- end .header --></div>
+  <div class="sidebar1">
+    <ul class="nav">
+      <li><a href="aqidah.php">Aqidah</a></li>      
+      <li><a href="quran.php">Holy Qur'an</a></li>
+      <li><a href="fiqh.php">Fiqh</a></li>
+      <li><a href="hadith.php">Hadith & Sunnah</a></li>
+      <li><a href="#">Hereafter & The Unseen</a></li>
+      <li><a href="#">Language & Science</a></li>
+      <li><a href="bio.php">Biography & History</a></li>
+    </ul>
+    
+    <!-- end .sidebar1 --></div>
+  <div class="content">
+  
+<!-- div-1 for first book-->
+<div class="book_content">
+	<div class="main_heading">  MeMiracles & Merits of Allah's Messenger (S)
+ </div>
+    <div class="main_container">
+    	<div class="main_image"><!--the image height:200px width:150px--><img src="my\Biography & History\Miracles & Merits of Allah's Messenger.jpg" alt=""/></div>
+    	<div class="main_details">
+<p>Code:  </p>
+<p>Price: </p>
+<p>Pages: 492</p>
+<p>Size: 6x9x1" (15x22x3 cm) </p>
+<p>Publisher: Dar-us-Salam</p>
+
+        </div>
+    </div>
+    <div class="main_description">
+Darussalarn is proud to present the abridged English translation of the classic work: Al-Bidayah wan Nihayah. This book focuses on the events that took place after the death of the Messenger of Allah, such as the choosing of Abu Bakr as the Caliph, the ghusl of the Prophet and his burial.
+The book then discusses the blessed and beautiful characteristics and merits of the Prophet and then goes on to describe the miracles that he performed. Ibn Katheer than compares the miracles given to Prophet Muhammad with those that were given to the other Prophets; he then shows that Prophet Muhammad collectively received the same miracles that were granted to the other Prophets separately.
+AI-Bidayah wan Nihayah (The Beginning and The End), by the renowned scholar Abu Al-Fida 'Imad ad-Deen Isma'eel bin 'Umar ibn Katheer, is considered as one of the most authoritative sources on Islamic History.
+
+    </div> 
+</div>
+
+<div class="book_content">
+	<div class="main_heading"> The Valley Came Alive</div>
+    <div class="main_container">
+    	<div class="main_image"><!--the image height:200px width:150px--><img src="my\Biography & History\The Valley Came Alive.jpg" alt=""/></div>
+    	<div class="main_details">
+      <p>Code:  </p>
+<p>Price: </p>
+<p>Pages: 326</p>
+<p>Size: 6x9x1" (15x22x3 cm) </p>
+<p>Publisher: Dar-us-Salam</p>
+
+        </div>
+    </div>
+    <div class="main_description">
+    
+Darussalam is proud to present the abridged English translation of the classic work: Al-Bidayah wan Nihayah, focusing exclusively on the life of Prophet Muhammad (peace be upon him). This volume contains a detail account of the life and times of the Messenger of Allah taken from a number of historical and traditional sources. The book reports the events of his blessed life, his battles, military campaigns, the delegations that met him, and sheds light upon the unique exemplary qualities, virtues and signs of his Messengership that make him a guide and role-model for all of humanity until the end of time.
+A1-Bidayah wan Nihayah (The Beginning and The End) by the renowned scholar Abu Al-Fida 'Imad ad-Deen lsma'eel bin 'Umar ibn Katheer, is considered one of the most authoritative sources on Islamic history.
+
+    </div> 
+</div>
+
+<div class="book_content">
+	<div class="main_heading">Winning the Hearts & Souls
+ </div>
+    <div class="main_container">
+    	<div class="main_image"><!--the image height:200px width:150px--><img src="my\Biography & History\Winning the Hearts & Souls.jpg" alt=""/></div>
+    	<div class="main_details">
+        <p>Code:</p>  
+<p>Price: </p>
+<p>Pages: 387</p>
+<p>Size: 6x9x1" (15x22x3 cm) </p>
+<p>Publisher: Dar-us-Salam</p>
+
+        </div>
+    </div>
+    <div class="main_description">
+   Darussalam is proud to present the abridged English translation of the classic work: Al-Bidayah wan Nihayah, focusing exclusively on the delegations and expeditions undertaken in the lifetime of Prophet Muhammad (peace and blessings be upon him).
+This volume contains an account of the some of the most important expeditions and delegations that occurred in the lifetime and under the leadership of the Messenger of Allah. These events had a significant impact on the spread of the Islamic faith to all the corners of Arabia and beyond.
+Al-Bidayah wan Nihayah (The Beginning and The End) by the renowned scholar Abu Al-Fida 'Imad ad-Deen Isma'eel bin 'Umar ibn Katheer/Kathir, is considered one of the most authoritative sources on Islamic history.
+
+
+
+
+
+    </div> 
+</div>
+   
+   <div class="book_content">
+	<div class="main_heading">Stories of the Prophets
+ </div>
+    <div class="main_container">
+    	<div class="main_image"><!--the image height:200px width:150px--><img src="my\Biography & History\Stories of Prophets.jpg" alt=""/></div>
+    	<div class="main_details">
+<p>Code: </p>
+<p>Price: </p>
+<p>Pages: 544 - </p>
+<p>Size: 6x9" (15x22 cm) </p>
+<p>Publisher: Dar-us-Salam</p>
+
+
+        </div>
+    </div>
+    <div class="main_description">
+  In this book, the stories of the prophets have been compiled from 'Al-Bidayah wan-Nihayah' (The Beginning and the End) which is a great work of the famous Muslim exegete and historian Ibn Kathir and has a prominent place in the Islamic literature. The stories of the prophets and all the events in their lives have been supported by the Qur'anic Verses and the Sunnah (traditions) of the Prophet (S). Wherever it was necessary, other sources have also been reported for the sake of historical accounts, but on such places a comparative study has been made to prove the authenticity of the sources. Ibn Kathir has reproduced the views and interpretations of all the great exegetes of the Qur'an of his time. The systemic narratives of the Stories of the Prophets have been written in chronological order which renders a historical style to the book.
+
+
+
+    </div> 
+</div>
+<div class="book_content">
+	<div class="main_heading">Stories of Repentance
+ </div>
+    <div class="main_container">
+    	<div class="main_image"><!--the image height:200px width:150px--><img src="my\Biography & History\Stories Of Repentance.jpg" alt=""/></div>
+    	<div class="main_details">
+<p>Code: </p>
+<p>Price: </p>
+<p>Pages: 127 - </p>
+<p>Size: 6x9" (15x22 cm) </p>
+<p>Publisher: Dar-us-Salam</p>
+
+
+
+        </div>
+    </div>
+    <div class="main_description">
+Who among us does not sin? And who among us does all that is required of him in the religion?
+It is an undeniable fact that we all have shortcomings; what distinguishes some of us from the others, what raises some of us above the others, is that the successful ones among us are those who repent their sins and ask Allah to forgive them.
+It is truly encouraging to know that the door to repentance is always open. Glad tidings, then, to every Muslim who constantly and consistently hastens to repent to Allah and to ask for His forgiveness.
+
+
+    </div> 
+</div>
+   <div class="book_content">
+	<div class="main_heading">Life and Times of the Messengers
+ </div>
+    <div class="main_container">
+    	<div class="main_image"><!--the image height:200px width:150px--><img src="my\Biography & History\Life and Times of the Messengers.jpg" alt=""/></div>
+    	<div class="main_details">
+<p>Code: </p>
+<p>Price: </p>
+<p>Pages: 465 -  </p>
+<p>Size: 6x9" (15x23 cm) </p>
+<p>Format: 2 Color Printing</p>
+<p>Publisher: Dar-us-Salam</p>
+</div>
+    </div>
+    <div class="main_description">
+This book is an abridged English translation from the great work of Ibn Katheer, Al-Bidayah wan Nihayah. This second part consists of the stories of Prophet Musa, Samuel, Zakariyyah, Yahya, Eeesa (Jesus), Dhu'l Qarnayn, and Luqman. It also covers the children of Israa'eel (Bani Israeel), divine scriptures and past nations.
+The exact number of prophets and messengers sent by Allah is not known, but the Qur'an makes clear that all of the prophets were sent to various nations to preach Islamic monotheism.
+Muslims believe that all the Divine Messengers — including those in common with Judaism and Christianity — conveyed the same message of true monotheism and submission to the one God, Allah. Belief in these prophets and messengers is an essential part of the Islamic faith and Muslims do not differentiate between them, according them all the same respect and reverence.
+Darussalam is proud to present the abridged English translation of Al-Bidayah wan Nihayah (The Beginning and The End), by the renowned scholar Abu Al-Fida, 'Imad ad-Deen Isma'eel bin 'Umar bin Katheer (Ibn Kathir), recounting the stories of the prophets and their nations.
+
+
+    </div> 
+</div>
+     <div class="book_content">
+	<div class="main_heading"> In Defence of the True Faith</div>
+    <div class="main_container">
+    	<div class="main_image"><!--the image height:200px width:150px--><img src="my\Biography & History\In Defence of the True Faith.jpg" alt=""/></div>
+    	<div class="main_details">
+	<p>Code: </p>
+	<p>Price: </p>
+	<p>images: 327 - </p>
+	<p>Size: 6x9" (14.5x21.5 cm) </p>
+	<p>Format: 2 Color Printing</p>
+	<p>Publisher: Dar-us-Salam</p>
+
+
+        </div>
+    </div>
+    <div class="main_description">
+Darussalam is proud to present the abridged English translation of the classic work: Al-Bidayah wan Nihayah, focusing exclusively on the battles, expeditions and Peace Treaties undertaken in the lifetime of Prophet Muhammad (peace and blessings be upon him). This volume contains a detailed account of the most momentous events from the Battle of Badr to the Battle of Mu'tah -that occurred to the Muslims under the leadership of the Messenger of Allah. Many of these events have become immortalized by the Noble Qur'an and continue to provide invaluable lessons to humanity, now and forever.
+Al-Bidayah wan Nihayah (The Beginning and The End) by the renowned scholar Abu Al-Fida 'Imad ad-Deen Isma'eel bin 'Umar ibn Katheer/Kathir, is considered one of the most authoritative sources on Islamic history.
+
+
+
+    </div> 
+</div>
+   <div class="book_content">
+	<div class="main_heading">Holy Makkah
+ </div>
+    <div class="main_container">
+    	<div class="main_image"><!--the image height:200px width:150px--><img src="my\Biography & History\Holy Makkah.jpg" alt=""/></div>
+    	<div class="main_details">
+<p>Code: </p>
+<p>Price: </p>
+<p>Pages: 152 </p>
+<p>Size: 6.7x9.5" (17x24 cm) Format: Full Color</p>
+<p>Publisher: Dar-us-Salam</p>
+
+
+
+        </div>
+    </div>
+    <div class="main_description">
+This book mentions the different aspects of Makkah, and recorded the most important historical events that have direct effect on the establishment and sacredness of Makkah as well as its religious weight.
+- This Book also highlights the sites that are highly important whenever Makkah is mentioned like the Black Stone, Zamzam Well, and others.
+- A great part of the book has been dedicated to in speaking about the Holy Ka'bah and the Holy Mosque updating the extensions and the improvements, that have taken place from the time of Prophet Muhammad (S) to the Saudi era.
+- At the end of the book there is a complete guide about Hajj and its rites.
+
+
+
+
+    </div> 
+</div>
+   
+     
+   <div class="book_content">
+	<div class="main_heading">History of Islam (3 Vols)</div>
+    <div class="main_container">
+    	<div class="main_image"><!--the image height:200px width:150px--><img src="my\Biography & History\History of Islam 3Vols.jpg" alt=""/></div>
+    	<div class="main_details">
+ <p>Code: </p>
+<p>Price: </p>
+<p>Pages: 1647 -  </p>
+<p>Size: 6x9" (15x22 cm) </p>
+<p>Publisher: Dar-us-Salam</p>
+
+
+        </div>
+    </div>
+    <div class="main_description">
+    
+History stands as the most effective and valuable source of putting nation on the course of progress and prosperity and saving them from the path of disgrace and degradation.
+At a time, when there is tough competition among the nations of the world to excel one another, the Muslim, despite having the most glorious history, appear to be detached and careless as regards their history.
+This book presents the true Islamic events and their actual causes before the English readers because the other books in the English language found on the Islamic history have been written by such authors and compilers who did no justice in presenting the true picture of Islamic Era but their prejudice prevented them from doing so.
+
+
+    </div> 
+</div>
+<div class="book_content">
+	<div class="main_heading"> Glimpses of the Lives of Righteous People
+ </div>
+    <div class="main_container">
+    	<div class="main_image"><!--the image height:200px width:150px--><img src="my\Biography & History\Righteous People.jpg" alt=""/></div>
+    	<div class="main_details">
+<p>Code: </p>
+<P>Price:</P>
+<P>ages: 152 -  </P>
+<p>Size: 6x9" (15x22 cm) </p>
+Pub<p>lisher: Dar-us-Salam</p>p>
+
+
+        </div>
+    </div>
+    <div class="main_description">
+In this book the highlights of the teachings of Islam have been presented through the glimpses of the lives of the righteous people who came before us and became the examples of religious enlightenment and excellence in the sincerity of faith and worship of Allah.
+In our learning process, we come across sermons, admonitions, advices and stories based on the lives of righteous people..... and these are the ones that interest us more and produce deep-rooted effects in our minds that we long remember to get benefited from them. And it is in the same spirit of learning that this book is compiled with.
+
+    </div> 
+</div>
+ <div class="book_content">
+	<div class="main_heading">  Early Days</div>
+    <div class="main_container">
+    	<div class="main_image"><!--the image height:200px width:150px--><img src="my\Biography & History\Early Days.jpg" alt=""/></div>
+    	<div class="main_details">
+<p>Code: </p>
+<p>Price: <p>
+<p>Pages: 408 -  </p>
+<p>Size: 6x9" (15x22 cm) </p>
+<p>Format: 2 Color Printing</p>
+<p>Publisher: Dar-us-Salam</p>
+
+        </div>
+    </div>
+    <div class="main_description">
+Al-Bidayah wan Nihayah. This book is the first part from this enormous work. It starts by describing the beginning of creation — from the Throne and the Kursi, the Universe and all that is in it, such as the angels, the Jinn and humans. This book continues to early Prophet Adam (Aadam) upto Prophet Yunus/Younus (A).
+Al-Bidayah wan Nihayah (The Beginning and The End) by the renowned scholar Abu Al-Fida, 'Imad ad-Deen Isma'eel bin 'Umar bin Katheer (Imam Ibn Kathir), is considered one of the most authoritative sources on Islamic history. A unique feature of the book is that it not only deals with past events, but also talks about future events mentioned by Prophet Muhammad (peace and blessings be upon him) until the Day of Judgment.
+
+
+    </div> 
+</div>
+  <div class="book_content">
+	<div class="main_heading"> Atlas of the Islamic Conquests</div>
+    <div class="main_container">
+    	<div class="main_image"><!--the image height:200px width:150px--><img src="my\Biography & History\Atlas of the Islamic Conquests.jpg" alt=""/></div>
+    	<div class="main_details">
+	<p>Code: </p>
+<p>Price: </p>
+<p>Pages: 490 – </p>
+<p>Size: 8.7x11.5x1" (22x29x2.7 cm) </p>
+<p>Format: Full Color</p>
+<p>Publisher: Dar-us-Salam</p>
+
+
+        </div>
+    </div>
+    <div class="main_description">
+"Atlas of the Islamic Conquests" has been prepared in view of the same lofty aim. In it are events of consecutive days, months & years of major Islamic Conquests, starting from the period of first Caliph Abu Bakr Siddiq (RA) to the reign of Ottoman Caliph Murad 3, have been described, with full color maps and unique snaps, in such a manner that the reader goes along with them and comes across wonderful historical happenings and new secrets of History are disclosed.
+Make thorough study of "Atlas of Islamic Conquests" yourself and motivate your children, kith and kins and friends to study it. This unique Atlas, having intrinsic and apparent beauty, is masterpiece of history and research and rich presentation for English readers.
+
+
+    </div> 
+</div>
+  <div class="book_content">
+	<div class="main_heading"> History of Madinah Munawwarah</div>
+    <div class="main_container">
+    	<div class="main_image"><!--the image height:200px width:150px--><img src="my\Biography & History\In Defence of the True Faith.jpg" alt=""/></div>
+    	<div class="main_details">
+	<p>Code:</p> 
+<p>price: </p>
+<p>Pages: 152 -  </p>
+<p>ize: 5.5x8" (14x21 cm) </p>
+<p>Format: Full Color</p>
+<p>Publisher: Dar-us-Salam</p>
+
+
+
+        </div>
+    </div>
+    <div class="main_description">
+•	In this book, mention has been made about the different aspects of Al-Madinah, and the most important historical events are recorded that have direct effect on the establishment and sacredness of Al-Madinah as well as its religious weight.
+•	This book has highlighted the sites that are highly important whenever Al-Madinah is mentioned like the Prophet's Mosque, Quba Mosque and others.
+•	A great part of the book is designated to speak about the Prophet's Mosque updating the expansions and the improvements that has taken place from the time of Muhammad (S) till the Saudi era.
+•	It contains more than fifty, pictures taken from original documented resources. The pictures vary from old to new dealing with many aspects.
+•	The book is a genuine addition to the Islamic library in, its subject both for the researcher and the regular reader.
+This book sought scientific trustworthiness, by presenting only the correct Ahadith and authentic reports.
+ar ibn Katheer/Kathir, is considered one of the most authoritative sources on Islamic history.
+
+
+
+    </div> 
+</div>
+<div id="main">
+<div style="font-family:'Georgia', Times New Roman, Times, serif; font-size: 16px; margin-bottom:20px; margin-left:20px; ">
+Post Your Comments:
+</div>
+<ol  id="update" class="timeline">
+</ol>
+<div id="flash" align="left"  ></div>
+
+<div style="margin-left:10px">
+<form action="#" method="post">
+<input type="text" name="title" id="name"/><span class="titles">Name</span><span class="star">*</span><br />
+
+<input type="text" name="email" id="email"/><span class="titles">Email</span><span class="star">*</span><br />
+
+<textarea name="comment" id="comment"></textarea><br />
+
+<input type="submit" class="submit" value="Post" />
+</form>
+</div>
+</div>
+</div> <!--End of container-->
+
+
+<div class="footer">
+ 
+    <center>This is a site created and maintained by |Azar & Co.|Katsun|Levi's Inc.|Benju DigiArt</center>
+    
+    <!-- end .footer --></div>
+</body>
+</html>
+

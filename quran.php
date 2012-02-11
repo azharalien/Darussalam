@@ -81,9 +81,13 @@ return false;
     <!-- end .header --></div>
   <div class="sidebar1">
     <ul class="nav">
-      <li><a href="example.php">Hereafter and Unseen</a></li>      <li><a href="#">Revelations</a></li>
-      <li><a href="#">Advanced books</a></li>
-      <li><a href="#">Recent</a></li>
+      <li><a href="aqidah.php">Aqidah</a></li>      
+      <li><a href="quran.php">Holy Qur'an</a></li>
+      <li><a href="fiqh.php">Fiqh</a></li>
+      <li><a href="hadith.php">Hadith & Sunnah</a></li>
+      <li><a href="#">Hereafter & The Unseen</a></li>
+      <li><a href="#">Language & Science</a></li>
+      <li><a href="bio.php">Biography & History</a></li>
     </ul>
     
     <!-- end .sidebar1 --></div>
@@ -91,53 +95,62 @@ return false;
   
 <!-- div-1 for first book-->
 <div class="book_content">
-	<div class="main_heading"> This the Heading Of the book </div>
+	<div class="main_heading">  Meaning of The Noble Quran (Word-for-Word) (A/E) (3 Vol.Set) / Aftab Alam Khan	
+ </div>
     <div class="main_container">
-    	<div class="main_image"><!--the image height:200px width:150px--><img src="" alt=""/></div>
+    	<div class="main_image"><!--the image height:200px width:150px--><img src="my\Holy Qur'an\MEANING-QURAN-WORD-FOR-WORD-.jpg" alt=""/></div>
     	<div class="main_details">
-        <p>Item: </p>
+        <p>Code: </p>
         <p>Price:</p>
         <p>Pages:</p>
-        <p>To Buy, Contact :machi fill Shop phone no. here...</p>
+        <p>To Buy, Contact :</p>
         <p>Email id: </p>        
         </div>
     </div>
     <div class="main_description">
-    This is the description of the book...
+    
+This set contains three volumes: vol 1,2 and 3 in which Volume-1 contains Part 1-10, Volume-2 contains Part 11-20, Volume-3 contains Part 21-30. This set is written to overcome the difficulty and to convey to the people the accurate meaning of the Qur'anic verses. This book is producing the word-for-word translation of the meanings of the Noble Qur'an and also the idiomatic translation in order to allow the readers to see the word-for-word translation. 
+
     </div> 
 </div>
 
 <div class="book_content">
-	<div class="main_heading"> This the Heading Of the book </div>
+	<div class="main_heading"> Holy Quran, The (A/E) (PB) / Trans. by A.Y. Ali </div>
     <div class="main_container">
-    	<div class="main_image"><!--the image height:200px width:150px--><img src="" alt=""/></div>
+    	<div class="main_image"><!--the image height:200px width:150px--><img src="my\Holy Qur'an\The Holy Quran.jpg" alt=""/></div>
     	<div class="main_details">
         <p>Item: </p>
         <p>Price:</p>
         <p>Pages:</p>
-        <p>To Buy, Contact : machi fill Shop phone no. here...</p>
+        <p>To Buy, Contact : .</p>
         <p>Email id: </p>
         </div>
     </div>
     <div class="main_description">
-    This is the description of the book...
+    
+'The Holy Qur'an' has English Translation With Original Arabic Text, Written By Abdullah Yusuf Ali. Size = 18X12 Total Pages = 752 Format = Paper Back Language = Arabic/English Layout = 1 Color 
+
     </div> 
 </div>
 
 <div class="book_content">
-	<div class="main_heading"> This the Heading Of the book </div>
+	<div class="main_heading">The Holy Quran Roman, (A/E/R) (1 col. /Paster) 
+Trans. by A.Y. Ali & Transliteration by M. A.H. Eliyasee
+
+ </div>
     <div class="main_container">
-    	<div class="main_image"><!--the image height:200px width:150px--><img src="" alt=""/></div>
+    	<div class="main_image"><!--the image height:200px width:150px--><img src="my\Holy Qur'an\THE-HOLY-QURAN.jpg" alt=""/></div>
     	<div class="main_details">
         <p>Item: </p>
         <p>Price:</p>
         <p>Pages:</p>
-        <p>To Buy, Contact : machi fill Shop phone no. here...</p>
+        <p>To Buy, Contact : .</p>
         <p>Email id: </p>        
         </div>
     </div>
     <div class="main_description">
-    This is the description of the book...
+   Trans. by A.Y. Ali & Transliteration by M. A.H. Eliyasee
+
     </div> 
 </div>
    

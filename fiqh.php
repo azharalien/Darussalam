@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<title></title>
+<link href="../WebPro/general.css" rel="stylesheet" type="text/css">
+<link href="../WebPro/comments.css" rel="stylesheet" type="text/css">
+<link href="../WebPro/dragdrop.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="slider.css" />
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js" ></script>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.5.3/jquery-ui.min.js" ></script>
+<script type="text/javascript">
+$(document).ready(function(){  
+    $("#featured > ul").tabs({fx:{opacity: "toggle"}}).tabs("rotate",8500, true);  
+});  
+
+$(function() {
+
+$(".submit").click(function() {
+
+var name = $("#name").val();
+var email = $("#email").val();
+	var comment = $("#comment").val();
+    var dataString = 'name='+ name + '&email=' + email + '&comment=' + comment;
+	
+	if(name=='' || email=='' || comment=='')
+     {
+    alert('Please Give Valide Details');
+     }
+	else
+	{
+	$("#flash").show();
+	$("#flash").fadeIn(400).html('<img src="ajax-loader.gif" align="absmiddle">&nbsp;<span class="loading">Loading Comment...</span>');
+$.ajax({
+	type: "POST",
+    url: "commentajax.php",
+    data: dataString,
+    cache: false,
+    success: function(html){
+ 
+  $("ol#update").append(html);
+  $("ol#update li:last").fadeIn("slow");
+  document.getElementById('email').value='';
+   document.getElementById('name').value='';
+    document.getElementById('comment').value='';
+	$("#name").focus();
+ 
+  $("#flash").hide();
+	
+  }
+ });
+}
+return false;
+	});
+
+
+
+});
+
+
+</script>
+
+</head>
+
+<body>
+<div class="container">
+  
+  <div class="header">
+ 
+<div id="centeredmenu">
+   <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">Categories</a></li>
+      <li><a href="#">Cart</a></li>
+      <li><a href="#">Login</a></li>
+   </ul>
+</div>
+    
+    
+    <!-- end .header --></div>
+  <div class="sidebar1">
+    <ul class="nav">
+      <li><a href="aqidah.php">Aqidah</a></li>      
+      <li><a href="quran.php">Holy Qur'an</a></li>
+      <li><a href="fiqh.php">Fiqh</a></li>
+      <li><a href="hadith.php">Hadith & Sunnah</a></li>
+      <li><a href="#">Hereafter & The Unseen</a></li>
+      <li><a href="#">Language & Science</a></li>
+      <li><a href="bio.php">Biography & History</a></li>
+    </ul>
+    
+    <!-- end .sidebar1 --></div>
+  <div class="content">
+  
+<!-- div-1 for first book-->
+<div class="book_content">
+	<div class="main_heading"> Sickness - Regulations & Exhortations
+ </div>
+    <div class="main_container">
+    	<div class="main_image"><!--the image height:200px width:150px--><img src="my\Fiqh\Sickness Regulations & Exhortations.jpg" alt=""/></div>
+    	<div class="main_details">
+       <p>Code:</p> 
+ <p>Price: </p>
+ <p>By: Muhammad al-Jibaly</p>
+ <p>Pages: 296</p>
+ <p>Binding: Hardback</p>
+ <p>Size: 7x10" (17x24 cm) </p>
+ <p>Publisher: Al-Kitab & As-Sunnah</p>
+
+        </div>
+    </div>
+    <div class="main_description">
+This book is the first in the series. It deals with sickness, which continues to afflict human beings from birth until death. Sickness strikes as light as a simple cold or allergy, and as hard as a plague or cancer. It keeps the human being under check, reminding him of his weakness and giving him a chance to turn to the One who possesses to afflict and cure. This book deals with sickness, its regulations, and lessons associated with it. It presents the Islamic stand toward a number of modern medical issues, and also discusses important regulations relating to those with disabilities.
+    </div> 
+</div>
+
+<div class="book_content">
+	<div class="main_heading"> The Evolution of Fiqh </div>
+    <div class="main_container">
+    	<div class="main_image"><!--the image height:200px width:150px--><img src="my\Fiqh\The Evolution of Fiqh.jpg" alt=""/></div>
+    	<div class="main_details">
+        <p>Code:</p>
+ <p>Price: </p>
+ <p>By: Dr.Abu Ameenah Bilal Philips</p>
+ <p>Pages: 208</p>
+ <p>Binding: Hardback</p>
+ <p>Size: 6x8.8" (15x22 cm)</p> 
+ <p>Publisher: IIPH</p>
+
+        </div>
+    </div>
+    <div class="main_description">About the Book: In the Evolution of Fiqh (Islamic Law & the Madh-habs), the author very clearly presents a brief overview of the historical development of Islamic law and its schools (the madh-habs).
+The book identifies the main reason for the appearance of the madh-habs and the factors leading to differences among them.
+For those to whom the madh-habs have been a mystery,this aspect of the book will be extremely enlightening.
+Although the author sheds light on both the positive and negative roles of the madh-habs in the past, the main message of the book is a call to the understanding of logistic differences (with an aim to remove them where possible),and a proposal for the unification of the madh-habs.
+"What makes this book stimulating are the perceptive and penetrating questions that Abu Ameenah raises.
+The book is important as it draws the Muslims' attention to self-criticism that is long overdue."
+
+    </div> 
+</div>
+
+<div class="book_content">
+	<div class="main_heading">Should a Muslim follow a Particular Madhab?
+
+ </div>
+    <div class="main_container">
+    	<div class="main_image"><!--the image height:200px width:150px--><img src="my\Fiqh\Should a Muslim Follow a Particular Madhhab.jpg" alt=""/></div>
+    	<div class="main_details">
+        <p>By: Muhammad Sultan Al-Ma'soomi</p>
+        <p>code: </p>
+        <p>Price:</p>
+        <p>Pages: 77</p>
+        <p>Binding: Paperback</p>
+        <p>T5.5x8" (14x20 cm) </p>
+        <p>Publisher: Dar-us-Salam </p>        
+        </div>
+    </div>
+    <div class="main_description">
+In this book, the author has widely described the main principle of Taqleed. He says that Allah and Prophet Mohammed (SAW) have not ordered us to follow any opinions and interpretations. So there's a possibility of being correct or incorrect in the opinions, because there are many issues on which the Imams had different views and they explain them according to their own reasons and speculations, but the real and true Islam is based on the book (Quran) and Prophet's Sunnah.
+Allah says: "But no, by your Lord, they can have no Faith until they make you judge in all disputed matters between them, and find in themselves no resistance against your decision, and accept them with full submission." And prophet said: "I leave you with two things as long as you hold them tightly, you never go astray: they are the book of Allah and my Sunnah." In this sense the author has described the difference between different Madhahib (madhabs/mazhabs), and their views and urged to follow only the Quran and Sunnah.
+
+
+    </div> 
+</div>
+   <div class="book_content">
+	<div class="main_heading">Minhaj Al-Muslim (2 Vol. Set)
+
+ </div>
+    <div class="main_container">
+    	<div class="main_image"><!--the image height:200px width:150px--><img src="my\Fiqh\Minhaj Al- Muslim.jpg" alt=""/></div>
+    	<div class="main_details">
+       <p>Code: </p>
+<p>Price: </p>
+<p>By: Abu Bakr Jabir Al-Jaza'iry</p>
+<p>Pages: 1062</p>
+<p>Binding: Hardback</p>
+<p>Size: 6x9" (15x22 cm)</p> 
+<p>Publisher: Dar-us-Salam</p>
+ 
+        </div>
+    </div>
+    <div class="main_description">
+A comprehensive work by the great scholar Abu Bakr Jabir Al-Jaza'ri comprising all that concerns a Muslim regarding creed, manners, providing direction for righteous character, acts of worship, and dealings with his colleagues.
+
+    </div> 
+</div>
+  <div class="book_content">
+	<div class="main_heading">
+Man-Made Laws vs. Shari'ah
+
+ </div>
+    <div class="main_container">
+    	<div class="main_image"><!--the image height:200px width:150px--><img src="my\Fiqh\Man Made Laws vs Shariah.jpg" alt=""/></div>
+    	<div class="main_details">
+      <p> Code: </p>
+<p>Price: </p>
+<p>By: Abdur Rahmaan ibn Salih al-Mahmood</p>
+<p>Translator: Nasiruddin al-Khttab</p>
+<p>Pages: 384</p>
+<p>Binding: Hardback</p>
+<p>Size: 6x9" (15x23 cm)</p> 
+<p>Publisher: IIPH</p>
+
+ 
+        </div>
+    </div>
+    <div class="main_description">
+This book appears at a time when many other books and ideas are being propogated to justify the status quo of the ummah, and the position of those who are not ruling by what Allah has revealed and to detract from the seriousness of the situation.
+This book is a detailed discussion of the extreme views of both the Murjiah and Khawaarij, which are clouding the ummahئs vision as they have done for far too long. The view of the Murjiئah states that faith is simply the matter of belief in the heart, which no link to action, whilst the view of the Khawaarij is that any sin equals a mjor kuft act which puts a person beyond the pale of Islam. The author highlights these distorted views, then explains the middle way of Ahl as-Sunnah waئl-Jamaaئah, based on the Qurئan and Sunnah, where faith is composed of both belief and action, and it may increase and decrease; while sin does not necessarily equal a major kuft act, but there are some major sins which do consitute major kufr acts and put a person beyond the pale of Islam, such as ruling by something other than what Allah has revealed.
+
+    </div> 
+</div>
+    <div class="book_content">
+	<div class="main_heading">
+Islamic Verdicts on the Pillars of Islam (2 Vol. Set)
+
+ </div>
+    <div class="main_container">
+    	<div class="main_image"><!--the image height:200px width:150px--><img src="my\Fiqh\Islamic Verdicts.jpg" alt=""/></div>
+    	<div class="main_details">
+     <p>Code:  </p>
+<p>Price:</p> 
+<p>By: Muhammad bin Salih Al-'Uthaimeen</p>
+<p>Pages: 775</p>
+<p>Binding: Hardback</p>
+<p>Size: 6x9" (15x22 cm)</p> 
+<p>Publisher: Dar-us-Salam</p>
+
+ 
+        </div>
+    </div>
+    <div class="main_description">
+The Fatawa presented in these volumes have been selected from the whole collection of the Fatawa of the learned Shaikh Muhammad bin Salih Al-'Uthaimeen and translated into the English language. These Fatawa are distinguished by their reliance upon the Book of Allah, the Most High, the Sunnah of His Messenger (S) and the opinions of the scholars who are known for their investigative powers.
+We hope that these Fatawa will provide the people great help, knowledge and understanding of the finer points of religious aspects.
+
+
+    </div> 
+</div>
+   <div class="book_content">
+	<div class="main_heading">
+
+Islamic Law of Succession
+
+
+ </div>
+    <div class="main_container">
+    	<div class="main_image"><!--the image height:200px width:150px--><img src="my\Fiqh\Law Of Succession.jpg" alt=""/></div>
+    	<div class="main_details">
+    <p> Code: </p>
+<p>Price: </p>
+<p>By: Dr. A. Hussain</p>
+<p>Translator: Editor: Dr. Abdul Ahad (Alig.)</p>
+<p>Pages: 628</p>
+<p>Binding: Hardback</p>
+<p>Size: 6x9" (15x22 cm)</p> 
+<p>Publisher: Dar-us-Salam</p>
+
+
+ 
+        </div>
+    </div>
+    <div class="main_description">
+Islam has given guidance to us in all aspects of life including the law of succession so that each eligible person gets the due share.
+Although the distribution of inheritance is an important topic for everyone of us but books on this subject are scarcely found.
+We are presenting this book to provide the readers a comprehensive overview of the whole subject according to the four main schools of jurisprudence. The text is in clear and unambiguous terms with highlighted points to understand the issues easily. This book includes descriptive diagrams & charts to make it easier to understand this topic that is rarely discussed.
+
+    </div> 
+</div>
+ <div class="book_content">
+	<div class="main_heading">
+
+Fiqh According to the Qur'an & Sunnah (Vol. 2)
+
+ </div>
+    <div class="main_container">
+    	<div class="main_image"><!--the image height:200px width:150px--><img src="my\Fiqh\Fiqh According to the Qur'an & Sunnah.jpg" alt=""/></div>
+    	<div class="main_details">
+    <p>Code: </p>
+<p>Price: </p>
+<p>Translator: Sameh Strauch</p>
+<p>Compiler: Muhammad Subhi bin Hasan Hallaq</p>
+<p>Pages: 640</p>
+<p>Binding: Hardback</p>
+<p>Size: 6x9x1.5" (15x22 cm) </p>
+<p>Publisher: Dar-us-Salam</p>
+
+
+ 
+        </div>
+    </div>
+    <div class="main_description">
+
+This book illustrates the many facets of our daily life according the Quran and Sunnah. This book is nicely divided into many sections starting with the Book of Purification and ending with the Book of Zakah. Each book is further subdivided into chapters which explain a specific topic in detail. Every effort is made so everything in the book is proven by the Quran and Sunnah. 
+
+
+    </div> 
+</div>
+   <div class="book_content">
+	<div class="main_heading">
+
+Fatawa Sirat-e-Mustaqeem
+ </div>
+    <div class="main_container">
+    	<div class="main_image"><!--the image height:200px width:150px--><img src="my\Fiqh\Fatawa Mustaqeem.jpg" alt=""/></div>
+    	<div class="main_details">
+   <p>Code:  </p>
+<p>Price:</p>
+<p>By: Maulana Mahmood Ahmed Mirpuri</p>
+<p>Pages: 317</p>
+<p>Binding: Paperback</p>
+<p>Size: 6x9" (15x22 cm) </p>
+<p>Publisher: Dar-us-Salam</p>
+
+
+
+ 
+        </div>
+    </div>
+    <div class="main_description">
+
+(Questions and Answers on various topics faced by Muslims every day)
+FOREWORD
+All praises be to Allah, Lord of honor and glory, who has guided us to be Muslims and made us among the followers of His last Prophet (peace be upon him).
+We are pleased to present this valuable and noble collection of 'Fatawa Sirat-e-Mustaqeem' (Islamic verdicts, questions and answers) which have been selected and compiled from the Urdu monthly magazine 'Sirat-e-Mustqaeem' published by Markazi jamiat Ahl-e-Hadith, UK.
+The 'Fatawa' (verdicts) to the readers queries and questions on Islamic matters were initially given by the Late Maulana Mahmood Ahmed Mirpuri. His effective method of replying in the light of Qur'an and Sunnah, as well as in accordance to the current issues, no doubt benefited readers worldwide rather than just the one questioner.
+
+
+
+    </div> 
+</div>
+   <div class="book_content">
+	<div class="main_heading">
+Fatawa Islamiyah (Islamic Verdicts) 8 Vol. Set
+ </div>
+    <div class="main_container">
+    	<div class="main_image"><!--the image height:200px width:150px--><img src="my\Fiqh\Fatawa Islamiyah 2Vols.jpg" alt=""/></div>
+    	<div class="main_details">
+  <p>Code: </p>
+<p>Price:  </p>
+<p>By: 3 Renowned Scholars & the Fiqh Council</p>
+<p>Pages: 3483</p>
+<p>Binding: Hardback</p>
+<p>Size: 6x9" (15x22 cm)</p> 
+<p>Publisher: Dar-us-Salam</p>
+
+
+
+ 
+        </div>
+    </div>
+    <div class="main_description">
+
+
+    </div> 
+</div>
+  <div class="book_content">
+	<div class="main_heading">
+Bulugh Al-Maram
+ </div>
+    <div class="main_container">
+    	<div class="main_image"><!--the image height:200px width:150px--><img src="my\Fiqh\Bulugh Al-Maaram.jpg" alt=""/></div>
+    	<div class="main_details">
+  <p>Code:  </p>
+<p>Price: </p>
+<p>By: Muhammad bin Ismail Al-Sanani</p>
+<p>Al-Hafiz Ibn Hajar Al-Asqalani</p>
+<p>Pages: 520</p>
+<p>Binding: Hardback</p>
+<p>Size: 6x9x1" (15x22x2.5 cm) </p>
+<p>Format: Arabic-English</p>
+<p>Publisher: Dar-us-Salam</p>
+
+
+
+
+ 
+        </div>
+    </div>
+    <div class="main_description">
+Bulugh Al-Maram is based upon the Ahadith of our Prophet which have been the sources of Islamic Jurisprudence. Al-Hafiz Ibn Hajar Al-Asqalani (Hijrah 777-853) has recorded the true significance of the Ahadith and their origins & also made a comparison of the versions, if the sources are more than one.
+
+    </div> 
+</div>
+<div class="book_content">
+	<div class="main_heading">
+The Book of Major Sins
+ </div>
+    <div class="main_container">
+    	<div class="main_image"><!--the image height:200px width:150px--><img src="my\Fiqh\Book of Major Sins.jpg" alt=""/></div>
+    	<div class="main_details">
+  <p>Code:  </p>
+<p>Price:  </p>
+<p>By: Imam Muhammad ibn Sulayman at-Tamimi</p>
+<p>Pages: 116</p>
+<p>Binding: Hardback</p>
+<p>Size: 6x9" (15x22 cm)</p> 
+<p>Publisher: IIPH</p>
+
+
+
+
+
+ 
+        </div>
+    </div>
+    <div class="main_description">
+Some of the major tribulations of human existence are the consequences of committing sins and spreading evil into the world. According to the moral scale of Islam, it is known that man is imperfect and fallible and prone to committing sins. This is part of his innate weak nature as a finite limited creature. However, it is a sin if he has the ways and means to attain relative moral perfection and deliberately chooses not to seek it.
+    </div> 
+</div>
+<div class="book_content">
+	<div class="main_heading">
+A Book on Islamic Studies
+ </div>
+    <div class="main_container">
+    	<div class="main_image"><!--the image height:200px width:150px--><img src="my\Fiqh\A Book on Islamic Studies.jpg" alt=""/></div>
+    	<div class="main_details">
+<p>Code: </p>
+<p>Price:</p> 
+<p>By: Abdur-Rahman Al-Mahmood</p>
+<p>Pages: 189 - View Sample </p>
+<p>Size: 6x9" (15x22 cm) </p>
+<p>Publisher: Dar-us-Salam</p>
+
+
+
+
+
+ 
+        </div>
+    </div>
+    <div class="main_description">
+This book has not come with anything new, rather it is compiled information that is indispensable for Muslims in their day-to-day life. It is also meant to be a reminder for the students of knowledge and callers to the way of Allah on important issues of the Shari'ah.
+    </div> 
+</div>
+
+<div id="main">
+<div style="font-family:'Georgia', Times New Roman, Times, serif; font-size: 16px; margin-bottom:20px; margin-left:20px; ">
+Post Your Comments:
+</div>
+<ol  id="update" class="timeline">
+</ol>
+<div id="flash" align="left"  ></div>
+
+<div style="margin-left:10px">
+<form action="#" method="post">
+<input type="text" name="title" id="name"/><span class="titles">Name</span><span class="star">*</span><br />
+
+<input type="text" name="email" id="email"/><span class="titles">Email</span><span class="star">*</span><br />
+
+<textarea name="comment" id="comment"></textarea><br />
+
+<input type="submit" class="submit" value="Post" />
+</form>
+</div>
+</div>
+</div> <!--End of container-->
+
+
+<div class="footer">
+ 
+    <center>This is a site created and maintained by |Azar & Co.|Katsun|Levi's Inc.|Benju DigiArt</center>
+    
+    <!-- end .footer --></div>
+</body>
+</html>
+
